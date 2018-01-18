@@ -3,7 +3,7 @@
       <router-link to="/product">商品</router-link>
       <router-link to="/seller">卖家</router-link>
       <router-link to="/discuss">评论</router-link>
-      <transition>
+      <transition name="fade">
        <router-view/>
        </transition>
   </div>
@@ -33,7 +33,7 @@ export default {
 a{
     
     text-decoration: none;
-    color: green;
+    color:palevioletred;
 
 }
 </style>
