@@ -1,7 +1,7 @@
 <template>
-<transition name='fade'>
+
   <div to="/seller" class='seller'>{{seller}}</div>
-  </transition>
+  
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default {
 
 <style>
 .seller{
-    float: left;
+    
     width: 30%
 }
 </style>
