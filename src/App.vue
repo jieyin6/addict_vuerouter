@@ -1,13 +1,24 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <top></top>
+    <center></center>
+    <bottom></bottom>
     <router-view/>
   </div>
 </template>
 
+
 <script>
+import top from './components/top'
+import center from './components/center'
+import bottom from './components/bottom'
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    top:top,
+    center:center,
+    bottom:bottom
+  }
 }
 </script>
 
