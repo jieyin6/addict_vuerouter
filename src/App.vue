@@ -3,8 +3,7 @@
     <top></top>
     <center></center>
     <bottom></bottom>
-    <router-view/>
-  </div>
+    </div>
 </template>
 
 

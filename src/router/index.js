@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
+import product from '../components/product'
+import seller from '../components/seller'
+import discuss from '../components/discuss'
 //import { resolve } from 'dns';
 
 Vue.use(Router)
