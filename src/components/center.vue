@@ -4,10 +4,11 @@
       <router-link to="/product">goods</router-link>
       <router-link to="/seller">sellers</router-link>
       <router-link to="/discuss">discuss</router-link>
-      </div>
-      <transition name="fade">
-       <router-view/>
+       </div>
+       <transition >
+       <router-view></router-view>
        </transition>
+     
   </div>
  
 </template>
@@ -28,7 +29,8 @@ export default {
 <style>
 .center{
     width: 100%;
-    height: 300px;
+    height: 400px;
+    overflow: auto
 }
 .a{
     display: flex;

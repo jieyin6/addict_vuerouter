@@ -1,6 +1,6 @@
 <template>
 
-  <div to="/seller" class='seller'>i am seller who is{{age}}years old</div>
+  <div to="/seller" class='seller'>i am seller who is {{age}} years old</div>
   
 </template>
 
@@ -13,8 +13,12 @@ export default {
       }
   },
   created:function(){
-      this.$http.get('/msg',function(res){
-          this.age = res.data.age;
+      var _this =this;
+       this.$http.get('/msg').then(function(res){
+          console.log(res);
+          _this.age = res.data.age;
+      }).catch(function(err){
+          console.log(err)
       })
   }
 }

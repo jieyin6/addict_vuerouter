@@ -8,22 +8,17 @@
 </template>
 
 <script>
+import mockjs from './assets/mock'
 import top from './components/top'
 import center from './components/center'
 import bottom from './components/bottom'
+
 export default {
   name: 'App',
   components:{
     top:top,
     center:center,
     bottom:bottom
-  },
-  methods:{
-    created:function(){
-      router.afterEach((to,from) => {
-        (<a></a>).style.color = yellow;
-      })
-    }
   }
 }
 </script>
@@ -36,5 +31,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   
+}
+.active{
+  color:yellow
 }
 </style>

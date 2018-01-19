@@ -1,5 +1,5 @@
 <template>
-  <div class='top'>i am header and my name is{{name}}</div>
+  <div class='top'>i am header and my name is {{name}}</div>
 </template>
 
 <script>
@@ -9,17 +9,17 @@ export default {
           name:''
       }
   },
-  methods:{
-      created:function(){
-          this.$http.get('/mag').then(function(res){
-              this.name = res.data.name;
+   created:function(){
+       var _this =this;
+          this.$http.get('/msg').then(function(res){
+              _this.name = res.data.name;
           }).catch(function(err){
               console.log(err)
           })
       }
 
 }
-}
+
 </script>
  
  <style>

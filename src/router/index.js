@@ -10,10 +10,12 @@ import child2 from '../components/child2'
 Vue.use(Router)
 
 export default new Router({
+  mode:'history',
+  linkActiveClass:'active',
   routes: [
     {
       path:'/',
-      redirect:'/product'
+      component:product
     },
     {
       path: '/product',
@@ -24,22 +26,28 @@ export default new Router({
       path:'/seller',
       name:'seller',
       component:seller
-    },{
+    },
+    {
       path:'/discuss',
       name:'discuss',
       component:discuss,
-      children:[
-        {
-          path:'/child1',
-          name:'child1',
-          component:child1
-        },
-        {
-          path:'/child2',
-          name:'child2',
-          component:child2
-        }
-      ]
+    children:[
+      {
+        path:'/',
+        component:child1
+      },
+    {
+      path:'child1',
+      name:'child1',
+      component:child1
+    },
+    {
+      path:'child2',
+      name:'child2',
+      component:child2
     }
-  ]
+  ]  
+} 
+]
+  
 })
