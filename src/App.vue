@@ -3,9 +3,9 @@
     <top></top>
     <center></center>
     <bottom></bottom>
-    </div>
+    
+  </div>
 </template>
-
 
 <script>
 import top from './components/top'
@@ -17,6 +17,13 @@ export default {
     top:top,
     center:center,
     bottom:bottom
+  },
+  methods:{
+    created:function(){
+      router.afterEach((to,from) => {
+        (<a></a>).style.color = yellow;
+      })
+    }
   }
 }
 </script>
@@ -28,6 +35,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  
 }
 </style>

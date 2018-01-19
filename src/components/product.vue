@@ -9,15 +9,12 @@ export default {
     name:'product',
   data:function(){
       return{
-          product:'商品'
+          product:'goods'
       }
   }
 }
 </script>
 
 <style>
-.product{
-    
-    width: 30%
-}
+
 </style>

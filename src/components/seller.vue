@@ -1,6 +1,6 @@
 <template>
 
-  <div to="/seller" class='seller'>{{seller}}</div>
+  <div to="/seller" class='seller'>i am seller who is{{age}}years old</div>
   
 </template>
 
@@ -9,15 +9,17 @@ export default {
     name:'seller',
   data:function(){
       return{
-          seller:'卖家'
+          age:''
       }
+  },
+  created:function(){
+      this.$http.get('/msg',function(res){
+          this.age = res.data.age;
+      })
   }
 }
 </script>
 
 <style>
-.seller{
-    
-    width: 30%
-}
+
 </style>

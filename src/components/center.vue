@@ -1,8 +1,10 @@
 <template>
   <div class="center">
-      <router-link to="/product">商品</router-link>
-      <router-link to="/seller">卖家</router-link>
-      <router-link to="/discuss">评论</router-link>
+      <div class="a">
+      <router-link to="/product">goods</router-link>
+      <router-link to="/seller">sellers</router-link>
+      <router-link to="/discuss">discuss</router-link>
+      </div>
       <transition name="fade">
        <router-view/>
        </transition>
@@ -26,14 +28,16 @@ export default {
 <style>
 .center{
     width: 100%;
-    height: 100px;
-    line-height: 100px;
-    color: green
+    height: 300px;
+}
+.a{
+    display: flex;
+    justify-content: space-around;
+    line-height: 50px;
+    
 }
 a{
-    
     text-decoration: none;
-    color:palevioletred;
-
+    color: gray
 }
 </style>

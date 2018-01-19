@@ -1,14 +1,24 @@
 <template>
-  <div class='top'>{{top}}</div>
+  <div class='top'>i am header and my name is{{name}}</div>
 </template>
 
 <script>
 export default {
-  data:function(){
+    data:function(){
       return{
-          top:'i am top'
+          name:''
       }
-  }
+  },
+  methods:{
+      created:function(){
+          this.$http.get('/mag').then(function(res){
+              this.name = res.data.name;
+          }).catch(function(err){
+              console.log(err)
+          })
+      }
+
+}
 }
 </script>
  
@@ -16,10 +26,10 @@ export default {
  .top{
      width: 100%;
      height: 200px;
-     background-color:red;
-     color: green;
+     background-color:skyblue;
+     color:red;
      line-height: 200px;
-     text-align: left
+     text-align: center
 
  }
  </style>
